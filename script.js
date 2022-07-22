@@ -40,12 +40,13 @@ function updateOperator(){
 }
 function updateDisplay(){
     currentDisplay.textContent = calculator.currentNum
-    prevDisplay.textContent = calculator.prevNum
+    prevDisplay.textContent = `${calculator.prevNum} ${calculator.storedOperation}`
 }
 
 function clear(){
     calculator.currentNum = ''
     calculator.prevNum = ''
+    calculator.storedOperation = ''
     updateDisplay()
 }
 
@@ -58,6 +59,7 @@ function equate(){
     if(calculator.prevNum === '' || calculator.currentNum === '') return
     calculator.currentNum = operate(calculator.storedOperation, parseFloat(calculator.prevNum), parseFloat(calculator.currentNum)).toString()
     calculator.prevNum = ''
+    calculator.storedOperation = ''
     updateDisplay()
 }
 
