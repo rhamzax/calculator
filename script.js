@@ -26,6 +26,7 @@ function updateNum(){
 
 function updateOperator(){
     if(calculator.currentNum === '' && calculator.prevNum === '') return
+    if(calculator.currentNum === '') return
     if(calculator.prevNum === ''){
         calculator.prevNum = calculator.currentNum
         calculator.storedOperation = this.value; 
