@@ -32,9 +32,14 @@ function updateOperator(){
         calculator.currentNum = ''
     }
     else{
-        calculator.prevNum = operate(calculator.storedOperation, parseFloat(calculator.prevNum), parseFloat(calculator.currentNum)).toString()
-        calculator.currentNum = '';
-        calculator.storedOperation = this.value; 
+        if(calculator.storedOperation === '/' && calculator.currentNum === '0'){
+            divideByZero()
+        }
+        else{
+            calculator.prevNum = operate(calculator.storedOperation, parseFloat(calculator.prevNum), parseFloat(calculator.currentNum)).toString()
+            calculator.currentNum = '';
+            calculator.storedOperation = this.value; 
+        }       
     }
     updateDisplay();
 }
@@ -57,10 +62,25 @@ function deleteNum(){
 
 function equate(){
     if(calculator.prevNum === '' || calculator.currentNum === '') return
-    calculator.currentNum = operate(calculator.storedOperation, parseFloat(calculator.prevNum), parseFloat(calculator.currentNum)).toString()
-    calculator.prevNum = ''
-    calculator.storedOperation = ''
-    updateDisplay()
+    if(calculator.storedOperation === '/' && calculator.currentNum === '0'){
+        divideByZero()
+    }
+    else{
+        calculator.currentNum = operate(calculator.storedOperation, parseFloat(calculator.prevNum), parseFloat(calculator.currentNum)).toString()
+        calculator.prevNum = ''
+        calculator.storedOperation = ''
+        updateDisplay()
+        calculator.currentNum = ''
+    }
+
+}
+
+function divideByZero(){
+        currentDisplay.textContent = 'LMAO'
+        prevDisplay.textContent = ''
+        calculator.currentNum = ''
+        calculator.prevNum = ''
+        calculator.storedOperation = ''
 }
 
 function add(num1, num2){
