@@ -55,11 +55,10 @@ function deleteNum(){
 }
 
 function equate(){
-    if(calculator.prevNum === '') return
+    if(calculator.prevNum === '' || calculator.currentNum === '') return
     calculator.currentNum = operate(calculator.storedOperation, parseFloat(calculator.prevNum), parseFloat(calculator.currentNum)).toString()
     calculator.prevNum = ''
     updateDisplay()
-    calculator.currentNum = ''
 }
 
 function add(num1, num2){
