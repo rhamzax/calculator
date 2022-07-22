@@ -73,6 +73,11 @@ select {
     scroll-behavior: auto !important;
   }
 }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-image: linear-gradient(to right top, #051937, #004d82, #0088a8, #00c38e, #00f72b);
+}
 
 footer{
     grid-column: 1 / -1;
@@ -101,4 +106,51 @@ footer{
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 1.5rem;
+}
+
+.display .prev {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.75);
+
+}
+
+.display .current {
+    font-size: 2rem;
+}
+
+.calc-grid > button {
+    background-color: rgba(190, 208, 243, 0.75);
+    border: black solid 2px;
+    outline: none;
+}
+
+.calc-grid > button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.calc-grid > .operator, .calc-grid > .equal{
+    background-color: #00c38e;
+}
+
+.calc-grid > .operator:hover, .calc-grid > .equal:hover{
+    background-color: #02bc8a;
+}
+
+.calc-grid > .clear{
+    background-color: rgb(217, 62, 62);
+}
+
+.calc-grid > .clear:hover{
+    background-color: rgb(217, 39, 39);
+}
+
+.calc-grid > .delete{
+    background-color: #0c7ac4;
+}
+
+.calc-grid > .delete:hover{
+    background-color: #056db2;
 }
