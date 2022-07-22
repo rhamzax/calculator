@@ -114,7 +114,6 @@ footer{
 .display .prev {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.75);
-
 }
 
 .display .current {
@@ -128,29 +127,29 @@ footer{
 }
 
 .calc-grid > button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(190, 208, 243, 0.9);;
 }
 
 .calc-grid > .operator, .calc-grid > .equal{
-    background-color: #00c38e;
+    background-color: rgba(0, 195, 142, 0.75);
 }
 
 .calc-grid > .operator:hover, .calc-grid > .equal:hover{
-    background-color: #02bc8a;
+    background-color: rgba(0, 195, 142, 0.9);
 }
 
 .calc-grid > .clear{
-    background-color: rgb(217, 62, 62);
+    background-color: rgba(255, 0, 0, 0.75);
 }
 
 .calc-grid > .clear:hover{
-    background-color: rgb(217, 39, 39);
+    background-color: rgba(255, 0, 0, 0.9);
 }
 
 .calc-grid > .delete{
-    background-color: #0c7ac4;
+    background-color: rgba(0, 95, 159, 1);
 }
 
 .calc-grid > .delete:hover{
-    background-color: #056db2;
+    background-color: rgba(0, 121, 201, 0.9);
 }
